@@ -1,0 +1,152 @@
+body{
+    background: #201e1e;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    text-decoration: none;
+    transition: 0.6s ease;
+    width:auto;
+    font-size: 18px;
+    padding: 16px;
+    margin-top: -22px;
+    font-weight: bold;
+    top: 50%;
+    border-radius: 0 3px 3px 0;
+    border:none;
+}
+
+.next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(223, 212, 212, 0.8);
+}
+
+.text {
+    color: #201e1e;
+    font-size: 18px;
+    padding: 8px 12px;
+    position:absolute;
+    top: 0;
+}
+.dotes {
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration:1.5s;
+    animation-name: fade;
+    animation-duration:1.5s;
+}
+
+@-webkit-keyframes fade {
+    from{opacity: 1;}
+    to{opacity: 0.8}
+}
+@keyframes fade {
+    from{opacity: 1;}
+    to{opacity: 0.8;}
+}
+
+.input-field {
+    width:200px;
+    height:20px;
+}
+
+
+.error .input-field {
+    border-color:red;
+    box-shadow: red 3px 3px 3px;
+    transform: scale(1.1);
+    transition: 650ms;
+}
+
+.error-label {
+    display: block;
+    color:red;
+    margin-bottom: 25px;
+}
+
+.last__form{
+    margin-left: 430px;
+}
+
+.input-box{
+    margin-top: 15px;
+}
+
+.button{
+    width: 80px;
+    margin-top: 7px;
+    margin-left: 60px;
+}
+
+.form{
+    box-shadow: #bbb -1px -1px 10px 10px;
+    margin-left: -50px;
+    margin-top: 90px;
+    width: 220px;
+    padding: 50px;
+    background: #717171;
+}
+
+h1{
+    margin-left: 5px;
+    margin-top: -30px;
+}
+
+.button:active, .button:hover{
+    box-shadow: #201e1e 3px 3px 3px;
+    transition: 400ms;
+}
+
+.button{
+    margin-top: 30px;
+}
+
+.sign{
+    font-size: 20px;
+    padding: 10px;
+    width: 40px;
+    margin-left: 990px;
+    padding: 10px 20px;
+}
+.sign:hover{
+    box-shadow: #bbb -0.5px -0.5px 3px 3px;
+    transition: 900ms;
+}
+
+.signin{
+    text-decoration: none;
+    color: #fff;
+    margin-left: -5px;
+}
