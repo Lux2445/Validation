@@ -4,32 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="sign">
-        <a href="" class="signin">Войти</a>
+    <div class="exit">
+        <button class="back">
+            <a href="" class="back__link">X</a>
+        </button>
     </div>
-    <div class="last__form">
-        <form action="" class="form" id="add-form">
-            <h1>Регистраация</h1>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Имя">
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Фамилия">
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Отчество">
-            </div>
-            <div class="button">
-                <button type="submit">Отправить</button>
-            </div>
-       </form>
-    </div>
+    <article class="container">
+
+        <div class="block">
+            <section class="block__item block-item">
+                <h2 class="block-item__title">У Вас уже есть аккаунт?</h2>
+                <button class="block-item__btn signin-btn">Войти</button>
+            </section>
+            <section class="block__item block-item">
+                <h2 class="block-item__title">У Вас нет аккаунта?</h2>
+                <button class="block-item__btn signup-btn ">Зарегестрироваться</button>
+            </section>
+        </div>
+        <div class="form-box">
+            <form action="" class="form form__signin">
+                <h3 class="form__title">Вход</h3>
+                <p>
+                    <input type="text" class="form__input" onkeypress="noError(event)" maxlength="20" placeholder="Логин">
+                </p>
+                <p>
+                    <input type="password" class="form__input" onkeypress="noError(event)" placeholder="Пароль">
+                </p>
+                <p>
+                    <button class="form__btn " onkeypress="noError(event)">Войти</button>
+                </p>
+                <p>
+                   <a href="" class="form__forget">Восстановить пароль</a>
+                </p>
+            </form>
 
 
-  
-    <script src="./js/app.js"></script>
+            <form action="" class="form form__signup">
+                <h3 class="form__title">Регистрация</h3>
+                <p>
+                    <input type="text" class="form__input" onkeypress="noDigits(event)" maxlength="20" placeholder="Логин">
+                </p>
+                <p>
+                    <input type="email" class="form__input" onkeypress="noError(event)" maxlength="20" placeholder="Email">
+                </p>
+                <p>
+                    <input type="password" class="form__input" onkeypress="noError(event)" placeholder="Пароль">
+                </p>
+                <p>
+                    <input type="password" class="form__input"  onkeypress="noError(event)" placeholder="Подтвердите пароль">
+                </p>
+                <p>
+                    <button class="form__btn form__btn_signup">Зарегестрироваться</button>
+                </p>
+
+            </form>
+        </div>
+    </article>
+
+<script src="/js/script.js" defer></script>
+<script src="/js/app.js"></script>
 </body>
-</html>
+</html> 

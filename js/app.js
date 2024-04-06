@@ -51,8 +51,15 @@
 
 // // Показать первый слайд при загрузке страницы
 // showSlide(slideIndex);
-
+const incorrectSybol = ["#", "*", "^", "$",]
 function validation(form) {
+    function removeError (input) {
+        const parent = input.parentNode
+        if(parent.classList.contains('error')){
+            parent.querySelector('.error-label').remove()
+            parent.classList.remove('error')
+        }
+    }
     function createError(text,input) {
         const parent = input.parentNode;
         const errorLabel = document.createElement('label')
@@ -64,17 +71,33 @@ function validation(form) {
     let result = true
     const allInputs = form.querySelectorAll('input')
     for (const input of allInputs) {
-        if(input.value=="") {
-            console.log("Заполните форму")
-            createError("Поле не заполнено", input)
-            result = false
+        removeError(input)
+        if(input.dataset.required == "true"){
+            if(input.value=="") {
+                console.log("Заполните форму")
+                createError("Поле не заполнено", input)
+                result = false
+            }
         }
-    }
+        if(input.dataset.maxLeght){
+        if (input.value.lenght > input.dataset.maxLength){
+                console.log("Ошибка поля")
+                createError(`Максивмальное количество символов не должно превышать :${input.dataset.maxLeght}`, input)
+                result = false
+            }
+        }
+        if(input.dataset.minLeght){
+            if (input.value.lenght < input.dataset.maxLength){
+                    console.log("Ошибка поля")
+                    createError(`минимальное количество символов не должно превышать :${input.dataset.minLeght}`, input)
+                    result = false
+                }
+            }
     form.querySelectorAll('input').forEach(element => {
         console.log(element)
     })
-    return result
-}
+    return result 
+    }}
 
 document.querySelector('#add-form').addEventListener('submit', function(event){
     event.preventDefault()
@@ -87,4 +110,9 @@ document.querySelector('.link').addEventListener('click', function(event){
     event.preventDefault()
     alert('Вы нажали на ссылку, но перехода не произошло')
 })
+
+// const oninput = document.querySelector('.input_form')
+// oninput = function () {
+//     this.value = this.value.slice(0, 3)
+// }
 
