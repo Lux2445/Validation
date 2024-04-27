@@ -8,9 +8,10 @@
 </head>
 <body>
     <div class="exit">
-        <button class="back">
-            <a href="https://lux2445.github.io/feel/" class="back__link">X</a>
-        </button>
+        <a href="https://lux2445.github.io/feel/" class="back__link">
+            <button class="back">X</button>
+        </a>
+       
     </div>
     <article class="container">
 
@@ -21,17 +22,17 @@
             </section>
             <section class="block__item block-item">
                 <h2 class="block-item__title">У Вас нет аккаунта?</h2>
-                <button class="block-item__btn signup-btn ">Зарегестрироваться</button>
+                <button class="block-item__btn signup-btn ">Зарегистрироваться</button>
             </section>
         </div>
         <div class="form-box">
             <form action="" class="form form__signin">
                 <h3 class="form__title">Вход</h3>
                 <p>
-                    <input type="text" class="form__input" onkeypress="noError(event)" maxlength="20" placeholder="Логин">
+                    <input type="text" class="form__input" onkeypress="noError(event)" maxlength="20" minlength="2" placeholder="Логин">
                 </p>
                 <p>
-                    <input type="password" class="form__input" onkeypress="noError(event)" placeholder="Пароль">
+                    <input type="password" class="form__input" onkeypress="noError(event)"  minlength="2" placeholder="Пароль">
                 </p>
                 <p>
                     <button class="form__btn ">Войти</button>
@@ -45,16 +46,16 @@
             <form action="" class="form form__signup">
                 <h3 class="form__title">Регистрация</h3>
                 <p>
-                    <input type="text" class="form__input" onkeypress="noError(event)" maxlength="20" placeholder="Логин">
+                    <input type="text" class="form__input" onkeypress="noError(event)" maxlength="20"  minlength="2" placeholder="Логин">
                 </p>
                 <p>
-                    <input type="email" class="form__input" onkeypress="noError(event)" maxlength="20" placeholder="Email">
+                    <input type="email" class="form__input" onkeypress="noError(event)" maxlength="20"  minlength="2" placeholder="Email">
                 </p>
                 <p>
-                    <input type="password" class="form__input" onkeypress="noError(event)" placeholder="Пароль">
+                    <input type="password" class="form__input" onkeypress="noError(event)"  minlength="2" placeholder="Пароль">
                 </p>
                 <p>
-                    <input type="password" class="form__input"  onkeypress="noError(event)" placeholder="Подтвердите пароль">
+                    <input type="password" class="form__input"  onkeypress="noError(event)"  minlength="2" placeholder="Подтвердите пароль">
                 </p>
                 <p>
                     <button class="form__btn form__btn_signup">Зарегестрироваться</button>

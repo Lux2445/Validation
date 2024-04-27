@@ -3,11 +3,8 @@ const signUnBtn = document.querySelector('.signup-btn')
 const formBox = document.querySelector('.form-box')
 const body = document.body;
 let tel = document.querySelector('.form__input')
-let error = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","=","+","№",";",":","?","{","}","[","]","''"] 
+let error = ["~","`","!","#","$","%","^","&","*","(",")","_","-","=","+","№",";",":","?","{","}","[","]","''"] 
 
-// tel.oninput = function(){
-// this.value = this.value.replace(error,);
-// }
 
 signUnBtn.addEventListener('click', function() {
     formBox.classList.add('active');
@@ -20,7 +17,7 @@ signInBtn.addEventListener('click', function () {
 });
 
 document.querySelector('form__input').addEventListener('input', function() {
-    const maxLength = 100;
+    const maxLength = 20;
     document.getElementById('charCount').maxLength - this.value.length;
   });
 
