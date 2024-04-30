@@ -18,6 +18,16 @@ body.active{
     background-color: #000000;
 }
 
+.error .form-input {
+    border-color: red;
+}
+
+.error-label {
+    display: block;
+    color: red;
+    margin-bottom: 10px;
+}
+
 .container{
     width: 800px;
     height: 450px;
@@ -164,4 +174,48 @@ body.active{
     box-shadow: #01c4ffa9 5px 5px 5px;
     transition: 700ms;
 
+}
+
+
+@media (max-width:768px) {
+    .back{
+        margin-left: 720px;
+    }
+
+
+@media (max-width:425px) {
+    
+    .block{
+        width: 600px;
+        height: 400px;
+        margin-left: 150px;
+    }
+    
+    .form-box{
+        height: 500px;
+        width: 500px;
+    }
+
+    .form__input{
+        margin-left: 30px;
+        width: 200px;
+    }
+    .form__btn{
+        width: 150px;
+        margin-left: 30px;
+    }
+
+    .form__btn_signup{
+        font-size: 14px;
+        padding-left: 10px;
+        margin-top: -10px;
+    }
+
+    .form__input{
+        margin-top: -5px;
+    }
+    .form__signin{
+        margin-left: 150px;
+    }
+}
 }
