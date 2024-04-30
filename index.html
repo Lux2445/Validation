@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="body">
     <div class="exit">
         <a href="https://lux2445.github.io/feel/" class="back__link">
             <button class="back">X</button>
@@ -30,9 +30,11 @@
                 <h3 class="form__title">Вход</h3>
                 <p>
                     <input type="text" class="form__input" onkeypress="noError(event)" maxlength="20" minlength="2" placeholder="Логин">
+                    <span id="text"></span>
                 </p>
                 <p>
                     <input type="password" class="form__input" onkeypress="noError(event)"  minlength="2" placeholder="Пароль">
+                    <span id="text"></span>
                 </p>
                 <p>
                     <button class="form__btn ">
@@ -43,21 +45,23 @@
                    <a href="" class="form__forget">Восстановить пароль</a>
                 </p>
             </form>
-
-
             <form action="" class="form form__signup" id="#add-form">
                 <h3 class="form__title">Регистрация</h3>
                 <p>
                     <input type="text" class="form__input" onkeypress="noError(event)" maxlength="20"  minlength="2" placeholder="Логин">
+                    <span id="text"></span>
                 </p>
                 <p>
                     <input type="email" class="form__input" onkeypress="noError(event)" maxlength="20"  minlength="2" placeholder="Email">
+                    <span id="text"></span>
                 </p>
                 <p>
                     <input type="password" class="form__input" onkeypress="noError(event)"  minlength="2" placeholder="Пароль">
+                    <span id="text"></span>
                 </p>
                 <p>
                     <input type="password" class="form__input"  onkeypress="noError(event)"  minlength="2" placeholder="Подтвердите пароль">
+                    <span id="text"></span>
                 </p>
                 <p>
                     <button class="form__btn form__btn_signup">
@@ -68,7 +72,6 @@
             </form>
         </div>
     </article>
-
     <script src="./js/app.js"></script>
 <script src="./js/script.js" defer></script>
 </body>

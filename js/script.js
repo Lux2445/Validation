@@ -26,3 +26,5 @@ document.querySelector('form__input').addEventListener('input', function() {
     if (error.indexOf(event.key) != -1)
       event.preventDefault();
   }
+
+
