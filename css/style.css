@@ -176,6 +176,11 @@ body.active{
 
 }
 
+.form__btn_link{
+    text-decoration: none;
+    color: #fff;
+}
+
 
 @media (max-width:768px) {
     .back{
